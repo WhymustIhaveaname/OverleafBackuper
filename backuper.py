@@ -146,4 +146,5 @@ if __name__=="__main__":
 --help  : print help
 no arg  : backup""")
     else:
+        log("start backup")
         bk.backup()
