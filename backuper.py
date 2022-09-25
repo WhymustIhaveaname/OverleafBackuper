@@ -11,7 +11,7 @@ def log(*msg,l=1,end="\n",logfile=LOGFILE):
     st=traceback.extract_stack()[-2]
     lstr=LOGLEVEL[l]
     #now_str="%s %03d"%(time.strftime("%y/%m/%d %H:%M:%S",time.localtime()),math.modf(time.time())[0]*1000)
-    now_str="%s"%(time.strftime("%y/%b %H:%M:%S",time.localtime()),)
+    now_str="%s"%(time.strftime("%y/%b/%d %H:%M:%S",time.localtime()),)
     perfix="%s [%s,%s:%03d]"%(now_str,lstr,st.name,st.lineno)
     if l<3:
         tempstr="%s %s%s"%(perfix,str(msg),end)
